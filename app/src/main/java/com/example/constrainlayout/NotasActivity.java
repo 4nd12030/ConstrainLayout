@@ -10,17 +10,17 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.constrainlayout.databinding.ActivityNotas2Binding;
+import com.example.constrainlayout.databinding.ActivityNotasBinding;
 
-public class NotasActivity extends AppCompatActivity {
+public class NotasActivity extends AppCompatActivity implements NotasInteractionListener{
 
-    private ActivityNotas2Binding binding;
+    private ActivityNotasBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityNotas2Binding.inflate(getLayoutInflater());
+        binding = ActivityNotasBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
@@ -34,4 +34,18 @@ public class NotasActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
     }
 
+    @Override
+    public void editNotaClick(Nota nota) {
+
+    }
+
+    @Override
+    public void eliminaNotaClick(Nota nota) {
+
+    }
+
+    @Override
+    public void favoritaNotaClick(Nota nota) {
+
+    }
 }
