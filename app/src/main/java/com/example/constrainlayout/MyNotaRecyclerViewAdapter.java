@@ -62,7 +62,7 @@ public class MyNotaRecyclerViewAdapter extends RecyclerView.Adapter<MyNotaRecycl
         public ViewHolder(FragmentNotaBinding binding) {
             super(binding.getRoot());
             //mIdView = binding.itemNumber;
-            tvTitulo = itemView.findViewById(R.id.textView);
+            tvTitulo = itemView.findViewById(R.id.textViewTitulo);
             tvContenido= itemView.findViewById(R.id.textViewContenido);
             ivFavorita= itemView.findViewById(R.id.imageViewFavorita);
         }
