@@ -27,7 +27,6 @@ public class NotaFragment extends Fragment {
     private static final String ARG_COLUMN_COUNT = "column-count";
     // TODO: Customize parameters
     private int mColumnCount = 2;
-    private NotasInteractionListener mListener;
     private List<Nota> notaList;
     private MyNotaRecyclerViewAdapter adapterNotas;
 
@@ -111,20 +110,11 @@ public class NotaFragment extends Fragment {
             notaList.add(new Nota("Recordar", "He aparcado el coche en la calle Republica, no olvidarme de pagar el parquimetro", false, android.R.color.holo_green_light));
 
 
-            adapterNotas = new MyNotaRecyclerViewAdapter(notaList, mListener);
+            adapterNotas = new MyNotaRecyclerViewAdapter(notaList, getActivity());
             recyclerView.setAdapter(adapterNotas);
         }
         return view;
     }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof NotasInteractionListener) {
-            mListener = (NotasInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-            + "debe implementarse NotasInteractionListener");
-        }
-    }
+
 }

@@ -2,6 +2,7 @@ package com.example.constrainlayout;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,11 +17,11 @@ import java.util.List;
 public class MyNotaRecyclerViewAdapter extends RecyclerView.Adapter<MyNotaRecyclerViewAdapter.ViewHolder> {
 
     private final List<Nota> mValues;
-    private final NotasInteractionListener mListener;
+    private Context ctx;
 
-    public MyNotaRecyclerViewAdapter(List<Nota> items, NotasInteractionListener listener) {
+    public MyNotaRecyclerViewAdapter(List<Nota> items, Context ctx ) {
        mValues = items;
-       mListener = listener;
+       this.ctx = ctx;
     }
 
     @Override
@@ -41,9 +42,7 @@ public class MyNotaRecyclerViewAdapter extends RecyclerView.Adapter<MyNotaRecycl
         }
 
         holder.ivFavorita.setOnClickListener(v -> {
-            if (null != mListener){
-                mListener.favoritaNotaClick(holder.mItem);
-            }
+
         });
     }
 
