@@ -10,7 +10,7 @@ import androidx.room.PrimaryKey;
 public class NotaEntity {
     @PrimaryKey(autoGenerate = true)
     public int id;
-    
+
     public String titulo;
     public String contenido;
     public boolean favorita;
