@@ -4,7 +4,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -16,10 +15,10 @@ import java.util.List;
 
 public class MyNotaRecyclerViewAdapter extends RecyclerView.Adapter<MyNotaRecyclerViewAdapter.ViewHolder> {
 
-    private final List<Nota> mValues;
+    private final List<NotaEntity> mValues;
     private Context ctx;
 
-    public MyNotaRecyclerViewAdapter(List<Nota> items, Context ctx ) {
+    public MyNotaRecyclerViewAdapter(List<NotaEntity> items, Context ctx ) {
        mValues = items;
        this.ctx = ctx;
     }
@@ -56,7 +55,7 @@ public class MyNotaRecyclerViewAdapter extends RecyclerView.Adapter<MyNotaRecycl
         public final TextView tvTitulo;
         public final TextView tvContenido;
         public final ImageView ivFavorita;
-        public Nota mItem;
+        public NotaEntity mItem;
 
         public ViewHolder(FragmentNotaBinding binding) {
             super(binding.getRoot());
