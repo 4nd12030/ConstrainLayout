@@ -1,4 +1,4 @@
-package com.example.constrainlayout;
+package com.example.constrainlayout.db.entity;
 
 import android.widget.FilterQueryProvider;
 

@@ -1,4 +1,4 @@
-package com.example.constrainlayout;
+package com.example.constrainlayout.ui;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,6 +12,9 @@ import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.constrainlayout.R;
+import com.example.constrainlayout.db.entity.NotaEntity;
 
 import java.util.ArrayList;
 import java.util.List;

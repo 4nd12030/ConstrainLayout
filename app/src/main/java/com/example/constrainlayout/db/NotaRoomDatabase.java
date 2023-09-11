@@ -1,10 +1,13 @@
-package com.example.constrainlayout;
+package com.example.constrainlayout.db;
 
 import android.content.Context;
 
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+
+import com.example.constrainlayout.db.dao.NotaDao;
+import com.example.constrainlayout.db.entity.NotaEntity;
 
 @Database(entities = {NotaEntity.class}, version = 1)
 public abstract class NotaRoomDatabase extends RoomDatabase {
