@@ -18,6 +18,8 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Switch;
 
+import com.example.constrainlayout.db.entity.NotaEntity;
+
 public class NuevaNotaDialogFragment extends DialogFragment {
 
     public static NuevaNotaDialogFragment newInstance() {
@@ -37,7 +39,7 @@ public class NuevaNotaDialogFragment extends DialogFragment {
 
         builder.setTitle("Nueva Nota");
         builder.setMessage("Introduzca los datos de la nueva nota")
-                .setPositiveButton("Guardar", (dialog, id) -> {
+                .setPositiveButton("Guardar", (dialog, id)  -> {
                     String titulo = etTitulo.getText().toString();
                     String contenido = etContenido.getText().toString();
                     String color = "azul";
@@ -52,10 +54,13 @@ public class NuevaNotaDialogFragment extends DialogFragment {
                     }
                     boolean esFavorita = swNotaFavorital.isChecked();
 
+                    //Comunicar al viewmodel el nuevo dato(nueva nota).
                     NuevaNotaDialogViewModel mViewModel = new ViewModelProvider(this).get(NuevaNotaDialogViewModel.class);
+                    mViewModel.insertarNota(new NotaEntity(titulo, contenido,esFavorita, color));
+                    dialog.dismiss();
                 })
                 .setNegativeButton("Cancelar", (dialog, id) -> {
-                    // User cancelled the dialog
+                    dialog.dismiss();
                 });
 
         LayoutInflater inflater = getActivity().getLayoutInflater();
