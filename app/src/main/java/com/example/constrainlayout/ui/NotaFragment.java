@@ -89,7 +89,7 @@ public class NotaFragment extends Fragment {
                     "and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections " +
                     "1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is" +
                     " a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", " +
-                    "comes from a line in section 1.10.32.",false, android.R.color.holo_orange_light));
+                    "comes from a line in section 1.10.32.",false, android.R.color.holo_purple));
             notaEntityList.add(new NotaEntity("Lista de la compra (Hoy)", "Comprar huevo, lechuga y jamon", true, android.R.color.holo_red_light));
             notaEntityList.add(new NotaEntity("Recordar Aniversario (Amoorcito)", "Hacer Reserva en el Restaurante Favorito de Lukas" +
                     " is a long established fact that a reader will be distracted by the readable content of a page when looking at its " +

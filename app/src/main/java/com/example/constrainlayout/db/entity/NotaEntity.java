@@ -1,7 +1,5 @@
 package com.example.constrainlayout.db.entity;
 
-import android.widget.FilterQueryProvider;
-
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -16,7 +14,7 @@ public class NotaEntity {
     public boolean favorita;
     public String color;
 
-    public NotaEntity(String titulo, String contenido, boolean favorita, String color) {
+    public NotaEntity(String titulo, String contenido, boolean favorita, int color) {
         this.titulo = titulo;
         this.contenido = contenido;
         this.favorita = favorita;
